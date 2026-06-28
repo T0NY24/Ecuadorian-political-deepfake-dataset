@@ -1,6 +1,6 @@
 {
   "dataset_name": "Ecuadorian Political Deepfake Dataset",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "total_images": 1462,
   "real_images": 731,
   "fake_images": 731,
@@ -27,9 +27,9 @@
     }
   },
   "splits": {
-    "train": 1023,
-    "val": 219,
-    "test": 220
+    "train": 1139,
+    "val": 203,
+    "test": 120
   },
   "generation": {
     "base_model": "FLUX.1-dev",
@@ -46,7 +46,7 @@
     "stored_resolution": "512x512"
   },
   "task": "image-classification (deepfake detection)",
-  "language": "es",
+  "language": "en",
   "license": "mit",
   "citation": "Citation will be added after publication - TICEC 2026"
 }
