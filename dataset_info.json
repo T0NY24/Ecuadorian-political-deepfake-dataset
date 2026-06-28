@@ -1,0 +1,52 @@
+{
+  "dataset_name": "Ecuadorian Political Deepfake Dataset",
+  "version": "1.0.0",
+  "total_images": 1462,
+  "real_images": 731,
+  "fake_images": 731,
+  "politicians": {
+    "noboa": {
+      "full_name": "Daniel Noboa",
+      "real": 231,
+      "fake": 231
+    },
+    "correa": {
+      "full_name": "Rafael Correa",
+      "real": 100,
+      "fake": 100
+    },
+    "lasso": {
+      "full_name": "Guillermo Lasso",
+      "real": 200,
+      "fake": 200
+    },
+    "gonzalez": {
+      "full_name": "Luisa Gonzalez",
+      "real": 200,
+      "fake": 200
+    }
+  },
+  "splits": {
+    "train": 1023,
+    "val": 219,
+    "test": 220
+  },
+  "generation": {
+    "base_model": "FLUX.1-dev",
+    "finetuning": "LoRA (rank=32, alpha=32)",
+    "platform": "MimicPC + FluxGym",
+    "inference": "ComfyUI (28 steps, CFG 7.0)",
+    "generation_resolution": "1024x1024"
+  },
+  "preprocessing": {
+    "face_detection": "MTCNN",
+    "confidence_threshold": 0.85,
+    "roi_expansion": "1.8w x 1.9h",
+    "normalization": "Bicubic scaling to 512x512 px",
+    "stored_resolution": "512x512"
+  },
+  "task": "image-classification (deepfake detection)",
+  "language": "es",
+  "license": "mit",
+  "citation": "Citation will be added after publication - TICEC 2026"
+}
